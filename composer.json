@@ -1,0 +1,44 @@
+{
+    "name": "coxy2001/silverstripe-elements",
+    "type": "silverstripe-vendormodule",
+    "description": "A set of SilverStripe elements",
+    "keywords": [
+        "silverstripe",
+        "elements",
+        "blocks",
+        "accordion",
+        "banner",
+        "content",
+        "icons",
+        "image",
+        "slider",
+        "gallery"
+    ],
+    "authors": [
+        {
+            "name": "Nathan Cox",
+            "email": "nathan.cox.cb@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "silverstripe/elemental-fileblock": "^2.0",
+        "silverstripe/elemental-bannerblock": "^2.0",
+        "colymba/gridfield-bulk-editing-tools": "^3.0",
+        "bummzack/sortablefile": "^2.0",
+        "gorriecoe/silverstripe-linkfield": "^1.0"
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "extra": {
+        "expose": [
+            "css",
+            "js"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "Coxy\\Elements\\": "src/"
+        }
+    }
+}
