@@ -1,8 +1,8 @@
 <?php
 
-namespace Coxy\Website\Models;
+namespace Coxy\Elements\Models;
 
-use Coxy\Website\Elements\ElementImageSlider;
+use Coxy\Elements\Elements\ElementImageSlider;
 use gorriecoe\Link\Models\Link;
 use gorriecoe\LinkField\LinkField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
@@ -11,7 +11,7 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\ORM\DataObject;
 
 /**
- * Class \Coxy\Website\Models\ImageSlide
+ * Class \Coxy\Elements\Models\ImageSlide
  *
  * @property string $Title
  * @property string $Content
@@ -21,7 +21,7 @@ use SilverStripe\ORM\DataObject;
  * @property int $SliderID
  * @method \SilverStripe\Assets\Image Image()
  * @method \gorriecoe\Link\Models\Link CTALink()
- * @method \Coxy\Website\Elements\ElementImageSlider Slider()
+ * @method \Coxy\Elements\Elements\ElementImageSlider Slider()
  */
 class ImageSlide extends DataObject
 {

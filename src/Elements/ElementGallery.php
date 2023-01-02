@@ -1,13 +1,13 @@
 <?php
 
-namespace Coxy\Website\Elements;
+namespace Coxy\Elements\Elements;
 
 use Bummzack\SortableFile\Forms\SortableUploadField;
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Assets\Image;
 
 /**
- * Class \Coxy\Website\Elements\ElementGallery
+ * Class \Coxy\Elements\Elements\ElementGallery
  *
  * @method \SilverStripe\ORM\ManyManyList|\SilverStripe\Assets\Image[] Images()
  */

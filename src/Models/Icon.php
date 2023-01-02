@@ -1,8 +1,8 @@
 <?php
 
-namespace Coxy\Website\Models;
+namespace Coxy\Elements\Models;
 
-use Coxy\Website\Elements\ElementIcons;
+use Coxy\Elements\Elements\ElementIcons;
 use gorriecoe\Link\Models\Link;
 use gorriecoe\LinkField\LinkField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
@@ -11,7 +11,7 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\ORM\DataObject;
 
 /**
- * Class \Coxy\Website\Models\Icon
+ * Class \Coxy\Elements\Models\Icon
  *
  * @property string $Content
  * @property int $Sort
@@ -20,7 +20,7 @@ use SilverStripe\ORM\DataObject;
  * @property int $ElementIconsID
  * @method \SilverStripe\Assets\Image Image()
  * @method \gorriecoe\Link\Models\Link CTALink()
- * @method \Coxy\Website\Elements\ElementIcons ElementIcons()
+ * @method \Coxy\Elements\Elements\ElementIcons ElementIcons()
  */
 class Icon extends DataObject
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Coxy\Website\Elements;
+namespace Coxy\Elements\Elements;
 
 use Colymba\BulkUpload\BulkUploader;
-use Coxy\Website\Models\ImageSlide;
+use Coxy\Elements\Models\ImageSlide;
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\GridField\GridField;
@@ -11,10 +11,10 @@ use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 /**
- * Class \Coxy\Website\Elements\ElementImageSlider
+ * Class \Coxy\Elements\Elements\ElementImageSlider
  *
  * @property string $SlideHeight
- * @method \SilverStripe\ORM\DataList|\Coxy\Website\Models\ImageSlide[] Slides()
+ * @method \SilverStripe\ORM\DataList|\Coxy\Elements\Models\ImageSlide[] Slides()
  */
 class ElementImageSlider extends BaseElement
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Coxy\Website\Extensions;
+namespace Coxy\Elements\Extensions;
 
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\ORM\DataExtension;
 
 /**
- * Class \Coxy\Website\Extensions\BannerExtension
+ * Class \Coxy\Elements\Extensions\BannerExtension
  *
  * @property string $BannerHeight
  */

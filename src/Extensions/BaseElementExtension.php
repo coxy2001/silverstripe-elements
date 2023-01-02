@@ -1,6 +1,6 @@
 <?php
 
-namespace Coxy\Website\Extensions;
+namespace Coxy\Elements\Extensions;
 
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\DropdownField;
@@ -8,7 +8,7 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataExtension;
 
 /**
- * Class \Coxy\Website\Extensions\BaseElementExtension
+ * Class \Coxy\Elements\Extensions\BaseElementExtension
  *
  * @property string $TextColour
  * @property string $BackgroundColour

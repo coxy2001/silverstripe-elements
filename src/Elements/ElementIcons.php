@@ -1,8 +1,8 @@
 <?php
 
-namespace Coxy\Website\Elements;
+namespace Coxy\Elements\Elements;
 
-use Coxy\Website\Models\Icon;
+use Coxy\Elements\Models\Icon;
 use DNADesign\Elemental\Models\BaseElement;
 use gorriecoe\Link\Models\Link;
 use gorriecoe\LinkField\LinkField;
@@ -11,11 +11,11 @@ use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 /**
- * Class \Coxy\Website\Elements\ElementIcons
+ * Class \Coxy\Elements\Elements\ElementIcons
  *
  * @property int $CTALinkID
  * @method \gorriecoe\Link\Models\Link CTALink()
- * @method \SilverStripe\ORM\DataList|\Coxy\Website\Models\Icon[] Icons()
+ * @method \SilverStripe\ORM\DataList|\Coxy\Elements\Models\Icon[] Icons()
  */
 class ElementIcons extends BaseElement
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Coxy\Website\Elements;
+namespace Coxy\Elements\Elements;
 
-use Coxy\Website\Models\AccordionItem;
+use Coxy\Elements\Models\AccordionItem;
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
@@ -10,10 +10,10 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 /**
- * Class \Coxy\Website\Elements\ElementAccordion
+ * Class \Coxy\Elements\Elements\ElementAccordion
  *
  * @property string $Content
- * @method \SilverStripe\ORM\DataList|\Coxy\Website\Models\AccordionItem[] AccordionItems()
+ * @method \SilverStripe\ORM\DataList|\Coxy\Elements\Models\AccordionItem[] AccordionItems()
  */
 class ElementAccordion extends BaseElement
 {

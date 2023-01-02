@@ -1,18 +1,18 @@
 <?php
 
-namespace Coxy\Website\Models;
+namespace Coxy\Elements\Models;
 
-use Coxy\Website\Elements\ElementAccordion;
+use Coxy\Elements\Elements\ElementAccordion;
 use SilverStripe\ORM\DataObject;
 
 /**
- * Class \Coxy\Website\Models\AccordionItem
+ * Class \Coxy\Elements\Models\AccordionItem
  *
  * @property string $Title
  * @property string $Content
  * @property int $Sort
  * @property int $AccordionID
- * @method \Coxy\Website\Elements\ElementAccordion Accordion()
+ * @method \Coxy\Elements\Elements\ElementAccordion Accordion()
  */
 class AccordionItem extends DataObject
 {

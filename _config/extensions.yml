@@ -4,12 +4,12 @@ Page:
 
 DNADesign\Elemental\Models\BaseElement:
   extensions:
-    - Coxy\Website\Extensions\BaseElementExtension
+    - Coxy\Elements\Extensions\BaseElementExtension
 
 DNADesign\Elemental\Models\ElementContent:
   extensions:
-    - Coxy\Website\Extensions\ElementContentExtension
+    - Coxy\Elements\Extensions\ElementContentExtension
 
 SilverStripe\ElementalBannerBlock\Block\BannerBlock:
   extensions:
-    - Coxy\Website\Extensions\BannerExtension
+    - Coxy\Elements\Extensions\BannerExtension

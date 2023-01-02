@@ -1,12 +1,12 @@
 <?php
 
-namespace Coxy\Website\Elements;
+namespace Coxy\Elements\Elements;
 
 use SilverStripe\ElementalFileBlock\Block\FileBlock;
 use SilverStripe\Forms\DropdownField;
 
 /**
- * Class \Coxy\Website\Elements\ElementImageContent
+ * Class \Coxy\Elements\Elements\ElementImageContent
  *
  * @property string $ImagePosition
  * @property string $Content

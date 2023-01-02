@@ -1,13 +1,13 @@
 <?php
 
-namespace Coxy\Website\Extensions;
+namespace Coxy\Elements\Extensions;
 
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\ORM\DataExtension;
 
 /**
- * Class \Coxy\Website\Extensions\ElementContentExtension
+ * Class \Coxy\Elements\Extensions\ElementContentExtension
  *
  * @property string $HTML2
  */
