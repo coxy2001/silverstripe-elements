@@ -7,20 +7,20 @@ use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Assets\Image;
 
 /**
- * Class \Coxy\Website\Elements\ElementPhotoGallery
+ * Class \Coxy\Website\Elements\ElementGallery
  *
  * @method \SilverStripe\ORM\ManyManyList|\SilverStripe\Assets\Image[] Images()
  */
-class ElementPhotoGallery extends BaseElement
+class ElementGallery extends BaseElement
 {
     const IMAGE_DIR = 'Uploads' . DIRECTORY_SEPARATOR . 'gallery';
 
-    private static $singular_name = 'Photo Gallery';
-    private static $plural_name = 'Photo Galleries';
-    private static $description = 'Gallery of photos';
-    private static $table_name = 'ElementPhotoGallery';
+    private static $singular_name = 'Gallery';
+    private static $plural_name = 'Galleries';
+    private static $description = 'Gallery of images';
+    private static $table_name = 'ElementGallery';
     private static $icon = 'font-icon-picture';
-    private static $element_class = 'photo-gallery';
+    private static $element_class = 'gallery';
 
     private static $db = [];
 
