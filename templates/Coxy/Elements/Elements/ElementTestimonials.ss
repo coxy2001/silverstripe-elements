@@ -4,7 +4,7 @@
     <% end_if %>
 
     <% if Testimonials %>
-        <section class="splide splide--regular">
+        <section <% if Testimonials.Count > 1 %>class="splide splide--regular"<% end_if %>>
             <div class="splide__track">
                 <ul class="splide__list">
                     <% loop Testimonials %>
