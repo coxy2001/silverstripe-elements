@@ -8,11 +8,13 @@ use gorriecoe\LinkField\LinkField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataObject;
 
 /**
  * Class \Coxy\Elements\Models\Icon
  *
+ * @property string $Title
  * @property string $Content
  * @property int $Sort
  * @property int $ImageID
@@ -32,6 +34,7 @@ class Icon extends DataObject
     private static $table_name = 'Icon';
 
     private static $db = [
+        'Title' => 'Varchar',
         'Content' => 'HTMLText',
         'Sort' => 'Int',
     ];
@@ -48,11 +51,13 @@ class Icon extends DataObject
 
     private static $summary_fields = [
         'Image.CMSThumbnail' => 'Image',
+        'Title' => 'Title',
         'Content.Summary' => 'Content',
     ];
 
     private static $searchable_fields = [
         'Image.Title',
+        'Title',
         'Content',
     ];
 
@@ -62,6 +67,7 @@ class Icon extends DataObject
         $fields->removeByName(['ElementIconsID', 'CTALinkID', 'Sort']);
 
         $fields->addFieldsToTab('Root.Main', [
+            TextField::create('Title'),
             HTMLEditorField::create('Content')->setRows(8),
             UploadField::create('Image')->setFolderName(self::IMAGE_DIR),
             LinkField::create('CTALink', 'Link', $this),

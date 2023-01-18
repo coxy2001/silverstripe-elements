@@ -10,6 +10,7 @@ use SilverStripe\ORM\DataExtension;
 /**
  * Class \Coxy\Elements\Extensions\BaseElementExtension
  *
+ * @property string $TitleAlignment
  * @property string $TextColour
  * @property string $BackgroundColour
  * @property string $PaddingTop
@@ -19,6 +20,7 @@ use SilverStripe\ORM\DataExtension;
 class BaseElementExtension extends DataExtension
 {
     private static $db = [
+        'TitleAlignment' => 'Varchar(16)',
         'TextColour' => 'Varchar(16)',
         'BackgroundColour' => 'Varchar(16)',
         'PaddingTop' => 'Varchar(16)',
@@ -27,6 +29,7 @@ class BaseElementExtension extends DataExtension
     ];
 
     private static $defaults = [
+        'TitleAlignment' => '',
         'TextColour' => '',
         'BackgroundColour' => '',
         'PaddingTop' => 'medium',
@@ -36,6 +39,17 @@ class BaseElementExtension extends DataExtension
 
     public function updateCMSFields(FieldList $fields)
     {
+        $titleAlignment = DropdownField::create(
+            'TitleAlignment',
+            'Title Alignment',
+            [
+                '' => 'Inherit',
+                'left' => 'Left',
+                'centre' => 'Centre',
+                'right' => 'Right',
+            ]
+        );
+
         $textColour = DropdownField::create(
             'TextColour',
             'Text Colour',
@@ -96,6 +110,8 @@ class BaseElementExtension extends DataExtension
 
         if ($owner->config()->get('element_class'))
             $classes['element'] = $owner->config()->get('element_class');
+        if ($owner->TitleAlignment)
+            $classes['title-align'] = 'element--title-' . $owner->TitleAlignment;
         if ($owner->TextColour)
             $classes['text-color'] = 'element--text-' . $owner->TextColour;
         if ($owner->BackgroundColour)
