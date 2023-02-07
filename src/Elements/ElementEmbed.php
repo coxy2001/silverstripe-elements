@@ -3,12 +3,17 @@
 namespace Coxy\Elements\Elements;
 
 use DNADesign\Elemental\Models\BaseElement;
+use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\TextareaField;
+use SilverStripe\Forms\TextField;
 
 /**
  * Class \Coxy\Elements\Elements\ElementEmbed
  *
  * @property string $HTML
+ * @property int $MaxWidth
+ * @property int $ScreenX
+ * @property int $ScreenY
  */
 class ElementEmbed extends BaseElement
 {
@@ -21,6 +26,9 @@ class ElementEmbed extends BaseElement
 
     private static $db = [
         'HTML' => 'HTMLText',
+        'MaxWidth' => 'Int',
+        'ScreenX' => 'Int',
+        'ScreenY' => 'Int',
     ];
 
     public function getCMSFields()
@@ -29,6 +37,14 @@ class ElementEmbed extends BaseElement
 
         $fields->addFieldsToTab('Root.Main', [
             TextareaField::create('HTML', 'HTML'),
+            DropdownField::create('MaxWidth', 'Maximum Width', [
+                0 => 'None',
+                600 => 'Small',
+                800 => 'Medium',
+                1000 => 'Large',
+            ]),
+            TextField::create('ScreenX', 'ScreenX'),
+            TextField::create('ScreenY', 'ScreenY'),
         ]);
 
         return $fields;
@@ -41,7 +57,7 @@ class ElementEmbed extends BaseElement
 
     public function getSummary()
     {
-        return $this->dbObject('Content')->Summary(20);
+        return $this->dbObject('HTML')->Summary(20);
     }
 
     protected function provideBlockSchema()
@@ -49,5 +65,10 @@ class ElementEmbed extends BaseElement
         $blockSchema = parent::provideBlockSchema();
         $blockSchema['content'] = $this->getSummary();
         return $blockSchema;
+    }
+
+    public function getResolution()
+    {
+        return $this->ScreenY / $this->ScreenX * 100;
     }
 }
