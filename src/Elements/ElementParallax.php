@@ -91,7 +91,7 @@ class ElementParallax extends BaseElement
     protected function provideBlockSchema()
     {
         $blockSchema = parent::provideBlockSchema();
-        if ($this->Image()) {
+        if ($this->Image()->exists()) {
             $blockSchema['fileURL'] = $this->Image()->CMSThumbnail()->getURL();
             $blockSchema['fileTitle'] = $this->Image()->getTitle();
         }

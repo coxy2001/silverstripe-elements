@@ -69,6 +69,8 @@ class ElementEmbed extends BaseElement
 
     public function getResolution()
     {
-        return $this->ScreenY / $this->ScreenX * 100;
+        if ($this->ScreenY && $this->ScreenX)
+            return $this->ScreenY / $this->ScreenX * 100;
+        return 0;
     }
 }
