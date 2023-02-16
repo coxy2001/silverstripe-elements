@@ -104,8 +104,8 @@ class ElementParallax extends BaseElement
         if ($this->Height)
             $classes['height'] = 'parallax--' . $this->Height;
         if ($this->Position)
-            $classes['height'] = 'parallax--' . $this->Position;
+            $classes['position'] = 'parallax--' . $this->Position;
         if ($this->Opacity)
-            $classes['height'] = 'parallax--opacity-' . $this->Opacity;
+            $classes['opacity'] = 'parallax--opacity-' . $this->Opacity;
     }
 }
