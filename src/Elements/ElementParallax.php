@@ -44,9 +44,11 @@ class ElementParallax extends BaseElement
     ];
 
     private static $defaults = [
-        'Height' => '',
+        'Height' => 'large',
         'Position' => '',
         'Opacity' => 'medium',
+        'PaddingTop' => '',
+        'PaddingBottom' => '',
     ];
 
     public function getCMSFields()
@@ -59,7 +61,7 @@ class ElementParallax extends BaseElement
             DropdownField::create('Height', 'Block Height', [
                 'small' => 'Small',
                 'medium' => 'Medium',
-                '' => 'Large',
+                'large' => 'Large',
             ]),
             DropdownField::create('Position', 'Content Position', [
                 '' => 'Full Width',

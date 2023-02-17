@@ -9,7 +9,7 @@
         </div>
         <% if $File %>
             <div class="image-content__col">
-                <img width="100%" src="$File.URL" alt="$File.Title">
+                <img class="image-content__image" src="$File.URL" alt="$File.Title">
             </div>
         <% end_if %>
     </div>
