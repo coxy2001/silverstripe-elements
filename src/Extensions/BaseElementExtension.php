@@ -57,6 +57,8 @@ class BaseElementExtension extends DataExtension
                 '' => 'Inherit',
                 'light' => 'Light',
                 'dark' => 'Dark',
+                'primary' => 'Primary',
+                'secondary' => 'Secondary',
             ]
         );
 
@@ -65,6 +67,8 @@ class BaseElementExtension extends DataExtension
             'Background Colour',
             [
                 '' => 'None',
+                'light' => 'Light',
+                'dark' => 'Dark',
                 'primary' => 'Primary',
                 'secondary' => 'Secondary',
             ]
