@@ -10,14 +10,25 @@
                     <% loop Testimonials %>
                         <li class="splide__slide">
                             <div class="testimonials__item">
+                                <% if $Logo %>
+                                    <div class="testimonials__header">
+                                        <img class="testimonials__logo" src="$Logo.URL" alt="$Logo.Title">
+                                    </div>
+                                <% end_if %>
                                 <div class="testimonials__content">
                                     $Content
                                 </div>
-                                <% if $Name || $Affiliation %>
+                                <% if $Name || $Position || $Affiliation %>
                                     <div class="testimonials__footer">
-                                        <% if $Name %>$Name<% end_if %>
-                                        <% if $Name && $Affiliation %> - <% end_if %>
-                                        <% if $Affiliation %>$Affiliation<% end_if %>
+                                        <% if $Name %>
+                                            <div class="tesimonials__name">$Name</div>
+                                        <% end_if %>
+                                        <% if $Position %>
+                                            <div class="tesimonials__position">$Position</div>
+                                        <% end_if %>
+                                        <% if $Affiliation %>
+                                            <div class="tesimonials__affiliation">$Affiliation</div>
+                                        <% end_if %>
                                     </div>
                                 <% end_if %>
                             </div>
