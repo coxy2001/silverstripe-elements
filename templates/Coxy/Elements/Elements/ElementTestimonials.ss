@@ -21,13 +21,13 @@
                                 <% if $Name || $Position || $Affiliation %>
                                     <div class="testimonials__footer">
                                         <% if $Name %>
-                                            <div class="tesimonials__name">$Name</div>
+                                            <div class="testimonials__name">$Name</div>
                                         <% end_if %>
                                         <% if $Position %>
-                                            <div class="tesimonials__position">$Position</div>
+                                            <div class="testimonials__position">$Position</div>
                                         <% end_if %>
                                         <% if $Affiliation %>
-                                            <div class="tesimonials__affiliation">$Affiliation</div>
+                                            <div class="testimonials__affiliation">$Affiliation</div>
                                         <% end_if %>
                                     </div>
                                 <% end_if %>
