@@ -36,6 +36,6 @@ class ElementTestimonials extends BaseElement
     public function getTestimonials()
     {
         $random = DB::get_conn()->random();
-        return Testimonial::get()->sort($random)->limit($this->Limit);
+        return Testimonial::get()->orderBy($random)->limit($this->Limit);
     }
 }
