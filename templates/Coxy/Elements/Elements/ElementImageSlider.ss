@@ -27,3 +27,6 @@
         </div>
     </section>
 <% end_if %>
+
+<% require css("coxy2001/silverstripe-elements:client/css/splide-core.min.css") %>
+<% require javascript("coxy2001/silverstripe-elements:client/js/splide.min.js") %>
